@@ -1,0 +1,26 @@
+## This file is overwritten upon Agent upgrade.
+## To make modifications to the check configuration, please copy this file
+## to `conf.yaml` and make your changes on that file.
+
+init_config:
+
+instances:
+  - ## @param apikey - string
+    ## The API key bound to the Ambient weather account
+    #
+    # apikey: <APIKEY>
+    
+    ## @param appkey - string
+    ## The application key for this application. This is a reusable key across
+    ## accounts, however, the Ambient documentation says that they may rate
+    ## limit.  If that occurs, then generate a new app key for your account
+    ## and use it here.
+    #
+    appkey: 9894f55835f74606898e6a63702a03715aaa5f9764d5456887c07df631904b96
+
+    ## @param min_collection_interval - integer 
+    ##
+    ## The Ambient documentation asks that data consumers be gentle with thier
+    ## API. Since the data is provided in 5 minute intervals, anyway, 150 should
+    ## be the minimum setting, and this could probably be 300 by default
+    min_collection_interval: 150
